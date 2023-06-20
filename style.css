@@ -1,0 +1,984 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: sans-serif;
+}
+#banner {
+  height: 100vh;
+  width: 100%;
+  background: url(/IMAGES/HUMAN\ WIDTH\ COMPUTER.jpg),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 255, 255));
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 217, 255, 0.336);
+  box-shadow: 0px 5px 5px black;
+  justify-content: space-around;
+}
+ul {
+  display: flex;
+}
+ul li {
+  padding: 5px 15px;
+}
+ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+}
+ul li a::before {
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: white;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  transition: 0.4s linear;
+}
+ul li:hover a::before {
+  width: 100%;
+}
+#click {
+  display: none;
+}
+label p {
+  position: fixed;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  top: 30px;
+  display: none;
+  right: 30px;
+  z-index: 100;
+}
+@media screen and (max-width: 1073px) {
+  .logo img {
+    width: 200px;
+  }
+  ul li {
+    padding: 5px 12px;
+  }
+  ul li a {
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+  }
+}
+@media screen and (max-width: 975px) {
+  label p {
+    display: block;
+  }
+  #click:checked ~ header {
+    left: 0;
+  }
+  header {
+    position: fixed;
+    height: 100vh;
+    left: -100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 217, 255, 0.336);
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.4s;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  ul li {
+    padding: 5px 12px;
+    margin: 20px;
+  }
+  ul li a {
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+  }
+}
+
+/*=============================================== THE ABOUT US SECTION START==================================== */
+
+#about {
+  width: 100%;
+  padding: 80px 0px;
+}
+.about-row {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.about-box {
+  width: 50%;
+  padding-right: 20px;
+}
+.about-box h2 {
+  font-size: 1.9rem;
+}
+.about-box p {
+  text-align: justify;
+  margin-top: 30px;
+  line-height: 25px;
+}
+.btn button {
+  padding: 9px 25px;
+  font-size: 16px;
+  margin: 20px 0px;
+  background: linear-gradient(to right, rgb(6, 6, 241), rgb(71, 69, 214));
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px blue;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.about-box2 {
+  width: 50%;
+  padding-left: 20px;
+}
+.line {
+  margin-bottom: 30px;
+  width: 90%;
+}
+.line input {
+  width: 99%;
+}
+@media screen and (max-width: 612px) {
+  .about-row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .about-box2 {
+    width: 100%;
+    text-align: center;
+  }
+  .about-box {
+    width: 100%;
+    text-align: center;
+    order: 3;
+  }
+}
+
+/* =========================OUR SERVICES SECTION STARTS============================================= */
+
+#service {
+  width: 100%;
+  /* background-color: yellow; */
+  padding: 70px 0px 30px 0px;
+  background: url(/IMAGES/francois-hoang-15LQr2QttqU-unsplash.jpg), rgba(0, 0, 0, 0.76);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+}
+.service-box {
+  width: 90%;
+  margin: auto;
+}
+.services-head {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.services-head p {
+  color: white;
+  font-size: 2.5rem;
+}
+.box-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.boxs {
+  width: 24%;
+  display: flex;
+  row-gap: 20px;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  transition: 0.4s ease-in;
+  box-shadow: 0px 0px 5px cyan;
+}
+.boxs:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 255, 255, 0.192)
+  );
+}
+.img h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+.dec {
+  text-align: center;
+}
+@media screen and (max-width: 1050px) {
+  .box-row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .boxs {
+    width: 49%;
+    display: flex;
+    row-gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: 0.4s ease-in;
+    box-shadow: 0px 0px 5px cyan;
+  }
+}
+@media screen and (max-width: 520px) {
+  .box-row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .boxs {
+    width: 100%;
+    display: flex;
+    row-gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: 0.4s ease-in;
+    box-shadow: 0px 0px 5px cyan;
+  }
+}
+
+/*======================== OUR TEAM SECTION START HERE NOW ==================================*/
+
+#team {
+  width: 100%;
+  padding: 70px 0px 50px 0px;
+}
+.team-box {
+  width: 90%;
+  margin: auto;
+}
+.team-head {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.team-head p {
+  color: black;
+  font-size: 2.5rem;
+}
+.team-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.team-card {
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.team-card .img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.team-card .img img {
+  width: 100%;
+}
+.team-card .name p {
+  color: rgb(46, 46, 255);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+.team-card .post {
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+.dec {
+  width: 100%;
+  padding: 5px 10px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 822px) {
+  .team-row {
+    width: 100%;
+    display: flex;
+    row-gap: 20px;
+    flex-wrap: wrap;
+  }
+  .team-card {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .team-card .img {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .team-card .img img {
+    width: 70%;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 518px) {
+  .team-row {
+    width: 100%;
+    display: flex;
+    row-gap: 20px;
+    flex-wrap: wrap;
+  }
+  .team-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .team-card .img {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .team-card .img img {
+    width: 70%;
+    border-radius: 20px;
+  }
+}
+
+/*================ WEBHOSTING PART START HERE NOW============================= */
+
+#host {
+  width: 100%;
+  height: 350px;
+  background-position: center;
+  background-size: contain;
+  background: url(/francois-hoang-15LQr2QttqU-unsplash.jpg),
+    rgba(0, 0, 0, 0.692);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0px 0px 0px;
+}
+.hosting {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.hosting p {
+  font-size: 2.3rem;
+  color: white;
+  margin-bottom: 20px;
+}
+.hosting button {
+  padding: 7px 20px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  background-color: rgb(12, 83, 107);
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px rgb(244, 244, 247);
+  color: white;
+  cursor: pointer;
+}
+
+/* ====================THE PRICE PLAN LIST SECTION START HERE NOW=========================*/
+
+#price-plan {
+  width: 100%;
+  background-color: lightgray;
+  padding: 70px 0px;
+}
+.plan-head {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.plan-head p {
+  color: black;
+  font-size: 2.5rem;
+}
+.price-row {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.price-card {
+  align-items: center;
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px black;
+}
+.header {
+  height: 130px;
+  width: 100%;
+  background-color: rgb(29, 150, 190);
+  text-align: center;
+  color: white;
+  padding-top: 22px;
+}
+.header h1 {
+  font-size: 2rem;
+}
+.header h3 {
+  font-size: 1.5rem;
+}
+.middle {
+  width: 100%;
+}
+.middle ul {
+  display: flex;
+  flex-direction: column;
+}
+.middle ul li {
+  padding-left: 20px;
+  margin: 10px 0px;
+  font-weight: bold;
+}
+.footer button {
+  padding: 10px 30px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  background-color: rgb(29, 150, 190);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.footer button:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 988px) {
+  #price-plan {
+    width: 100%;
+    background-color: lightgray;
+    padding: 70px 0px;
+  }
+  .plan-head {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .plan-head p {
+    color: black;
+    font-size: 2.2rem;
+  }
+  .price-row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .price-card {
+    align-items: center;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px black;
+  }
+  .header {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(29, 150, 190);
+    text-align: center;
+    color: white;
+    padding-top: 22px;
+  }
+  .header h1 {
+    font-size: 1.7rem;
+  }
+  .header h3 {
+    font-size: 1.3rem;
+  }
+  .middle {
+    width: 100%;
+  }
+  .middle ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .middle ul li {
+    padding-left: 5px;
+    margin: 10px 0px;
+    font-weight: bold;
+  }
+  .footer button {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-bottom: 30px;
+    background-color: rgb(29, 150, 190);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s all;
+  }
+}
+@media screen and (max-width: 822px) {
+  #price-plan {
+    width: 100%;
+    background-color: lightgray;
+    padding: 70px 0px;
+  }
+  .plan-head {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .plan-head p {
+    color: black;
+    font-size: 2.5rem;
+  }
+  .price-row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .price-card {
+    align-items: center;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px black;
+  }
+  .header {
+    height: 130px;
+    width: 100%;
+    background-color: rgb(29, 150, 190);
+    text-align: center;
+    color: white;
+    padding-top: 22px;
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
+  .header h3 {
+    font-size: 1.5rem;
+  }
+  .middle {
+    width: 100%;
+  }
+  .middle ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .middle ul li {
+    padding-left: 20px;
+    margin: 10px 0px;
+    font-weight: bold;
+  }
+  .footer button {
+    padding: 10px 30px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    background-color: rgb(29, 150, 190);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s all;
+  }
+  .footer button:hover {
+    opacity: 0.9;
+  }
+}
+@media screen and (max-width: 522px) {
+  .price-row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .price-card {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px black;
+  }
+}
+
+/*====================== TESTIMONIAL SECTION START HERE NOW=============== */
+
+#testimonial {
+  width: 100%;
+}
+.text-head {
+  width: 100%;
+  text-align: center;
+}
+.text-head p {
+  color: black;
+  font-size: 2.5rem;
+  margin-top: 50px;
+}
+.text-head small {
+  font-size: 20px;
+}
+.text-row {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.box {
+  margin-top: 40px;
+  width: 32%;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: lightgray;
+  box-shadow: 0px 0px 5px black;
+  padding-bottom: 40px;
+}
+.box:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 255, 255, 0.192)
+  );
+}
+.box .img img {
+  border-radius: 100px;
+  width: 32%;
+  top: -30px;
+  left: 35%;
+  position: absolute;
+  border: 4px solid white;
+  padding: 2px;
+}
+.box blockquote {
+  margin-top: 80px;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+.box h3 {
+  font-size: 19px;
+  color: rgb(35, 35, 150);
+}
+.box h3 span {
+  font-size: 14px;
+  color: black;
+}
+.box:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 255, 255, 0.192)
+  );
+}
+
+@media screen and (max-width: 822px) {
+  .text-row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .box {
+    margin-top: 40px;
+    width: 48%;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: lightgray;
+    box-shadow: 0px 0px 5px black;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 522px) {
+  .text-row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 70px;
+    margin-top: 40px;
+  }
+  .box {
+    margin-top: 40px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: lightgray;
+    box-shadow: 0px 0px 5px black;
+    padding-bottom: 40px;
+  }
+  .box:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 255, 255, 0.192)
+    );
+  }
+  .box .img img {
+    border-radius: 100px;
+    width: 32%;
+    top: -70px;
+    left: 35%;
+    position: absolute;
+    border: 4px solid white;
+    padding: 2px;
+    margin-bottom: 50px;
+  }
+  .box blockquote {
+    margin-top: 80px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+/*=================== GET IT TOUCH SECTION START HERE NOW================================= */
+
+#contact {
+  width: 100%;
+  margin-top: 70px;
+  padding-top: 20px;
+  background-color: lightgray;
+}
+.get-box {
+  width: 90%;
+  margin: auto;
+}
+.get-head {
+  width: 100%;
+  text-align: center;
+}
+.get-head p {
+  color: black;
+  font-size: 2.5rem;
+  margin-top: 50px;
+}
+.box-row {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.box-con {
+  width: 50%;
+  margin-top: 20px;
+}
+.box-con input {
+  width: 90%;
+  height: 35px;
+  padding-left: 20px;
+  margin: 15px 0px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+}
+.box-con textarea {
+  width: 90%;
+}
+.box-con button {
+  margin: 20px 0px;
+  padding: 7px 25px;
+  font-size: 16px;
+  background-color: rgb(16, 40, 48);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px white;
+  cursor: pointer;
+}
+.box-con ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.box-con ul li {
+  width: 100%;
+  border: 1px solid black;
+  margin: 15px 0px;
+  padding: 7px 0px 7px 5px;
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+  outline: none;
+  border: none;
+}
+.box-con a {
+  color: black;
+  letter-spacing: 0;
+  padding-left: 10px;
+  font-size: 13px;
+}
+.box-con span {
+  color: blue;
+  font-size: 15px;
+  padding-left: 10px;
+}
+.copy {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}
+.copy p {
+  padding: 20px 0px;
+}
+@media screen and (max-width: 752px) {
+  #contact {
+    width: 100%;
+    margin-top: 70px;
+    padding-top: 20px;
+    background-color: lightgray;
+  }
+  .get-head {
+    width: 100%;
+    text-align: center;
+  }
+  .get-head p {
+    color: black;
+    font-size: 2.5rem;
+    margin-top: 50px;
+  }
+  .box-row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+  .box-con {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .box-con input {
+    width: 100%;
+    height: 35px;
+    padding-left: 20px;
+    margin: 15px 0px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+  }
+  .box-con textarea {
+    width: 100%;
+  }
+  .box-con button {
+    margin: 20px 0px;
+    padding: 7px 25px;
+    font-size: 16px;
+    background-color: rgb(16, 40, 48);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px white;
+    cursor: pointer;
+  }
+  .box-con ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .box-con ul li {
+    width: 100%;
+    border: 1px solid black;
+    margin: 15px 0px;
+    padding: 7px 0px 7px 5px;
+    background-color: white;
+    border-radius: 4px;
+    color: black;
+    outline: none;
+    border: none;
+  }
+  .box-con a {
+    color: black;
+    letter-spacing: 0;
+    padding-left: 10px;
+    font-size: 13px;
+  }
+  .box-con span {
+    color: blue;
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  .copy {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+  }
+  .copy p {
+    padding: 20px 0px;
+  }
+}
